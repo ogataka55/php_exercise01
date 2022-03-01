@@ -1,11 +1,11 @@
 <?php
 
-$msg = '';
+$name1 = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $msg = $_POST['message'];
+    $name1 = $_POST['message'];
 }
 
-if ($msg) {
-    echo htmlspecialchars("私の名前は、{$msg}です。", ENT_QUOTES, 'UTF-8');
+if ($name1) {
+    echo htmlspecialchars("私の名前は、{$name1}です。", ENT_QUOTES, 'UTF-8');
 }

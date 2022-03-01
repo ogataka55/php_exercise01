@@ -35,16 +35,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <li><?= $err_msg ?></li>
                 </ul>
             <?php endif; ?>
-            <label for="">1つめの数字</label><br>
-            <input type="text" name="f_num" value="<?= $f_num ?>">
+            <label for="num1">1つめの数字</label><br>
+            <input type="text" name="f_num" id="num1" value="<?= $f_num ?>">
         </div>
         <div>
-            <label for="">2つめの数字</label><br>
-            <input type="text" name="s_num" value="<?= $s_num ?>">
+            <label for="num2">2つめの数字</label><br>
+            <input type="text" name="s_num" id="num2" value="<?= $s_num ?>">
         </div>
         <div>
-            <label for="">3つめの数字</label><br>
-            <input type="text" name="t_num" value="<?= $t_num ?>">
+            <label for="num3">3つめの数字</label><br>
+            <input type="text" name="t_num" id="num3" value="<?= $t_num ?>">
         </div>
         <div>
             <input type="submit" value="送信">
