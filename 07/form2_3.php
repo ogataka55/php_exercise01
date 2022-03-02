@@ -1,6 +1,6 @@
 <?php
 
-$score = '';
+$score = 0;
 $err_msg = '';
 $ok_msg = '合格です';
 $ng_msg = '不合格です';
@@ -11,12 +11,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (empty($score)) {
         $err_msg = '点数が入力されていません。';
-    }
-    if ($score >= 60) {
+    } elseif ($score >= 60) {
         header("Location: judge_ment.php?judge_ment={$ok_msg}");
         exit;
-    }
-    if ($score && $score < 60) {
+    } elseif ($score && $score < 60) {
         header("Location: judge_ment.php?judge_ment={$ng_msg}");
         exit;
     }

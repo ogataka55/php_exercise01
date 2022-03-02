@@ -16,13 +16,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (empty($name)) {
         $err_msgs[] = '氏名を入力して下さい';
-    }
-
-    if (empty($tel)) {
+    } elseif (empty($tel)) {
         $err_msgs[] = '電話番号を入力して下さい';
-    }
-
-    if (empty($email)) {
+    } elseif (empty($email)) {
         $err_msgs[] = 'メールアドレスを入力して下さい';
     }
 }
