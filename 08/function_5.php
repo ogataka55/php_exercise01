@@ -10,8 +10,8 @@ $week = [
     '金', //5
     '土', //6
 ];
-$push = '';
 $date = '';
+$msg_dow = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $date = date('Y年m月d日');
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
-    <?php if (empty($date)) : ?>
+    <?php if (empty($date) && empty($msg_dow)) : ?>
         <h2>本日の日付、曜日を確認しますか？</h2>
         <form action="" method="post">
             <input type="submit" value="はい">
