@@ -14,11 +14,8 @@ $push = '';
 $date = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $push = $_POST['push'];
-    if ($push) {
-        $date = date('Y年m月d日');
-        $msg_dow = $week[date('w')];
-    }
+    $date = date('Y年m月d日');
+    $msg_dow = $week[date('w')];
 }
 ?>
 
@@ -33,12 +30,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
-    <?php if (empty($push)) : ?>
+    <?php if (empty($date)) : ?>
         <h2>本日の日付、曜日を確認しますか？</h2>
         <form action="" method="post">
-            <input type="submit" name="push" value="はい">
+            <input type="submit" value="はい">
         </form>
-    <?php elseif ($push) : ?>
+    <?php else: ?>
         <h1>今日は、<?= $date ?><?= $msg_dow ?>曜日です</h1>
         <a href="function_5.php">戻る</a>
     <?php endif; ?>
